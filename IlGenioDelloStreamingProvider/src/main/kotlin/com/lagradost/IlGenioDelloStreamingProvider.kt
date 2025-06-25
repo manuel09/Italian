@@ -17,7 +17,7 @@ import org.jsoup.nodes.Element
 
 class IlGenioDelloStreamingProvider : MainAPI() {
     override var lang = "it"
-    override var mainUrl = "https://ilgeniodellostreaming.diy"
+    override var mainUrl = "https://ilgeniodellostreaming.qpon/"
     override var name = "IlGenioDelloStreaming"
     override val hasMainPage = false
     override val hasChromecastSupport = true
@@ -29,8 +29,8 @@ class IlGenioDelloStreamingProvider : MainAPI() {
         )
     override val mainPage =
         mainPageOf(
-            Pair("$mainUrl/popular-movies/page/", "Film Popolari"),
-            Pair("$mainUrl/the-most-voted/page/", "I più votati"),
+            Pair("$mainUrl/film/", "Film"),
+            Pair("$mainUrl/serie-tv/", "serie-tv"),
         )
     private val interceptor = CloudflareKiller()
 
